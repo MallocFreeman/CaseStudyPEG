@@ -7,5 +7,6 @@ import de.drauschke.casestudypeg.R
  */
 enum class Brand(val nameID: Int, val appearanceID: Int) {
     PARSHIP(R.string.brand_parship, R.style.TextView_Parship),
-    ELITE_PARTNER(R.string.brand_elitepartner, R.style.TextView_ElitePartner)
+    ELITE_PARTNER(R.string.brand_elitepartner, R.style.TextView_ElitePartner),
+    EHARMONY(R.string.eharmony, R.style.TextView_Eharmony)
 }

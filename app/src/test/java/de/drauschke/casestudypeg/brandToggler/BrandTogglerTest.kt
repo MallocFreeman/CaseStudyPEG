@@ -8,7 +8,6 @@ import org.junit.runner.RunWith
 import org.mockito.Mock
 import org.mockito.Mockito.`when`
 import org.mockito.junit.MockitoJUnitRunner
-
 @RunWith(MockitoJUnitRunner::class)
 class BrandTogglerTest {
     @Mock
@@ -24,23 +23,24 @@ class BrandTogglerTest {
 
     @Test
     fun toggle_TwiceInitialBrandParship_BrandAfterToggleIsCorrect() {
-        testExecution(2, Brand.PARSHIP, Brand.PARSHIP)
+        testExecution(2, Brand.PARSHIP, Brand.EHARMONY)
     }
 
     @Test
     fun toggle_InitialBrandElitePartner_BrandAfterToggleIsCorrect() {
-        testExecution(1, Brand.ELITE_PARTNER, Brand.PARSHIP)
+        testExecution(1, Brand.ELITE_PARTNER, Brand.EHARMONY)
     }
 
     @Test
     fun toggle_TwiceInitialBrandElitePartner_BrandAfterToggleIsCorrect() {
-        testExecution(2, Brand.ELITE_PARTNER, Brand.ELITE_PARTNER)
+        testExecution(2, Brand.ELITE_PARTNER, Brand.PARSHIP)
     }
 
     private fun testExecution(toggleCount: Int, initialBrand: Brand, expectedBrand: Brand) {
         `when`(contextMock.resources).thenReturn(resourcesMock)
         `when`(resourcesMock.getText(Brand.PARSHIP.nameID)).thenReturn("Parship")
         `when`(resourcesMock.getText(Brand.ELITE_PARTNER.nameID)).thenReturn("Elitepartner")
+        `when`(resourcesMock.getText(Brand.EHARMONY.nameID)).thenReturn("EHarmony")
         val brandToggler = BrandToggler(initialBrand)
         for (i in 0 until toggleCount) {
             brandToggler.toggle(contextMock)

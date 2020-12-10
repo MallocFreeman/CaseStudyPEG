@@ -20,11 +20,18 @@ class BrandToggler {
      * @param context the surrounding context to get access to text resources.
      */
     fun toggle(context: Context?) {
-        activeBrand = if (isActiveBrand(context!!, Brand.PARSHIP)) {
-            Brand.ELITE_PARTNER
-        } else {
-            Brand.PARSHIP
-        }
+        activeBrand =
+            when {
+                isActiveBrand(context!!, Brand.PARSHIP) -> {
+                    Brand.ELITE_PARTNER
+                }
+                isActiveBrand(context!!, Brand.ELITE_PARTNER) -> {
+                    Brand.EHARMONY
+                }
+                else -> {
+                    Brand.PARSHIP
+                }
+            }
     }
 
     /**

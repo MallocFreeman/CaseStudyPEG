@@ -19,6 +19,11 @@
     <item name="android:text">@string/brand_elitepartner</item>
   </style>
 
+  <style name="TextView.Eharmony" parent="TextView.CaseStudy">
+    <item name="android:textColor">@color/eharmony</item>
+    <item name="android:text">@string/eharmony</item>
+  </style>
+
   <style name="Button.ToggleButton" parent="Widget.AppCompat.Button.Colored">
     <item name="android:background">@color/gray</item>
     <item name="android:textColor">@color/white</item>
