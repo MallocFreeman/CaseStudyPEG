@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="TextView.CaseStudy" parent="TextAppearance.AppCompat">
+    <item name="android:textStyle">normal</item>
+    <item name="android:textSize">60sp</item>
+    <item name="android:fontFamily">sans-serif</item>
+    <item name="android:textAlignment">center</item>
+  </style>
+
+  <style name="TextView.Parship" parent="TextView.CaseStudy">
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/parship</item>
+    <item name="android:text">@string/brand_parship</item>
+  </style>
+
+  <style name="TextView.ElitePartner" parent="TextView.CaseStudy">
+    <item name="android:textColor">@color/elitepartner</item>
+    <item name="android:text">@string/brand_elitepartner</item>
+  </style>
+
+  <style name="Button.ToggleButton" parent="Widget.AppCompat.Button.Colored">
+    <item name="android:background">@color/gray</item>
+    <item name="android:textColor">@color/white</item>
+    <item name="android:text">@string/toggleButton</item>
+    <item name="android:padding">15dp</item>
+  </style>
+</resources>

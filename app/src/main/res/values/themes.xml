@@ -1,0 +1,14 @@
+<resources>
+
+  <style name="Theme.CaseStudy" parent="Theme.AppCompat.DayNight">
+    <item name="android:buttonStyle">@style/Button.ToggleButton</item>
+  </style>
+
+  <style name="Theme.Parship" parent="Theme.CaseStudy">
+    <item name="android:textViewStyle">@style/TextView.Parship</item>
+  </style>
+
+  <style name="Theme.ElitePartner" parent="Theme.CaseStudy">
+    <item name="android:textViewStyle">@style/TextView.ElitePartner</item>
+  </style>
+</resources>
